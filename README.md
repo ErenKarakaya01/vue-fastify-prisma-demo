@@ -13,6 +13,7 @@ npx prisma migrate dev --name init
 ```
 
 In the backend folder, change the .env file database connection url with your url.
+The mysql server must be running with Xampp or any other software.
 
 In the root directory, run the following:
 
