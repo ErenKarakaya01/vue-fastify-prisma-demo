@@ -160,6 +160,8 @@ export default async function (fastify: FastifyInstance) {
       }
     }
 
+    console.log(image)
+
     if (!name || !parent_id) {
       reply.code(400).send({ error: 'Missing name or parent_id' })
       return
@@ -167,7 +169,7 @@ export default async function (fastify: FastifyInstance) {
 
     const date = new Date().getMilliseconds()
 
-    await pump(image.file, fs.createWriteStream(`./public/images/${date + image.filename}`))
+    await pump(image.file, fs.createWriteStream(image.filename))
 
     if (!name || !parent_id) {
       reply.code(400).send({ error: 'Missing name or parent_id' })
@@ -178,7 +180,7 @@ export default async function (fastify: FastifyInstance) {
       const newCategory = await prisma.category.create({
         data: {
           name: name.value,
-          picture: "/public/images/" + date + image.filename,
+          picture: "/public/images/" + image.filename,
           parent_id: parseInt(parent_id.value),
           created_at: new Date()
         }
