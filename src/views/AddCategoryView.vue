@@ -1,13 +1,12 @@
 <template>
   <div>
-    <h1>Product Image Upload</h1>
+    <h1>Add Category</h1>
     <form @submit.prevent="handleSubmit">
       <input type="file" @change="handleFileChange" accept="image/*" />
-      <input v-model="name" placeholder="Product Name" /><br />
+      <input v-model="name" placeholder="Category Name" /><br />
       <textarea v-model="parent_id" placeholder="Parent Id"></textarea><br />
-      <button type="submit">Upload Product</button>
+      <button type="submit">Upload Category</button>
     </form>
-    <img src="http://127.0.0.1:8080/public/images/517Screenshot_.png" />
   </div>
 </template>
 
