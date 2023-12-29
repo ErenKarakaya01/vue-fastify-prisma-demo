@@ -43,7 +43,7 @@ export default async function (fastify: FastifyInstance) {
   })
 
   // Create a new product
-  fastify.post('/categories', async (request: FastifyRequest, reply: FastifyReply) => {
+  fastify.post('/products', async (request: FastifyRequest, reply: FastifyReply) => {
     const { image, name, category_id } = request.body as {
       image: MultipartFile
       name: {
