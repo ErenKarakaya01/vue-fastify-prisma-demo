@@ -1,46 +1,45 @@
-# frontend
+How to Run
 
-This template should help get you started developing with Vue 3 in Vite.
+Go to the root directory and backend folder and run the following code in the command line:
 
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
-
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
-
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
+```
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+Go to the backend directory and run following:
 
-```sh
+```
+npx prisma migrate dev --name init
+```
+
+In the backend folder, change the .env file database connection url with your url.
+
+In the root directory, run the following:
+
+```
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+Run the following line in another command prompt:
 
-```sh
-npm run build
+```
+npx ts-node index.ts
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+Now you can go to following urls:
 
-```sh
-npm run lint
-```
+- http://127.0.0.1:5173/add-category
+- http://127.0.0.1:5173/tree
+- http://127.0.0.1:5173/parent-categories
+
+![Screenshot_123](https://github.com/ErenKarakaya01/vue-fastify-prisma-demo/assets/58625563/3bdba85f-e4f9-4457-b990-d8844b7558f2)
+
+![Screenshot_1234](https://github.com/ErenKarakaya01/vue-fastify-prisma-demo/assets/58625563/afe14d8e-4fb1-4a6b-9e93-7f4be9ff891c)
+
+![Screenshot_12345](https://github.com/ErenKarakaya01/vue-fastify-prisma-demo/assets/58625563/30545edd-4df0-46ff-b738-5dd7ad67ba6c)
+
+
+Also you can join my postman workspace and select the task and check the api status.
+https://app.getpostman.com/join-team?invite_code=378093b260574d831ffc3a9d5c4b7873&target_code=ad19ac1fa2c3737aa80e88de81d08587
+
+![Screenshot_3123456](https://github.com/ErenKarakaya01/vue-fastify-prisma-demo/assets/58625563/33c30b3b-6f56-4911-86b3-981a804ef476)
